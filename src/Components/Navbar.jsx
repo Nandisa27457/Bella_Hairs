@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <h2 className="font-display text-2xl tracking-tight">
+        <h2 className="font-display text-2xl">
           Bella Hair
         </h2>
       </div>

@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 
+h2{
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #000;
+
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -20,15 +27,16 @@
 
 .nav-links {
   display: flex;
+  gap: 30px;
   list-style: none;
-  gap: 25px;
   margin: 0;
   padding: 0;
 }
 
+
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #333333b0;
   font-weight: 500;
 }
 
@@ -37,7 +45,7 @@
 }
 
 .book-btn {
-  background-color: #d4a373;
+  background-color: black;
   color: white;
   border: none;
   padding: 12px 24px;
