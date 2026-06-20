@@ -2,13 +2,11 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white mt-20 w-full">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-
-        {/* Brand */}
+    <footer className="border-t border-gray-200 mt-24">
+      <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-50">
         <div>
           <h2 className="text-2xl font-display tracking-wide">
-            Bella Hair
+            Bella Hair 
           </h2>
           <p className="text-sm text-gray-400 mt-3 leading-relaxed">
             Luxury hair care and styling experience designed to bring out your confidence and beauty.
@@ -47,7 +45,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-800 text-center py-4 text-xs text-gray-500">
+      <div className="border-t border-gray-200 text-center py-4 text-xs text-gray-500">
         © {new Date().getFullYear()} Bella Hair. All rights reserved.
       </div>
     </footer>
