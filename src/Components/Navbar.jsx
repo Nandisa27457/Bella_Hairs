@@ -20,10 +20,13 @@ function Navbar() {
           <li><Link to="/gallery">Gallery</Link></li>
         </ul>
 
+       <Link to="/booking">     
         <button className="book-btn">
           Book Now
         </button>
+        </Link>
       </div>
+
     </nav>
   );
 }
