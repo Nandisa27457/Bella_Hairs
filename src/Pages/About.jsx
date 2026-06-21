@@ -33,7 +33,7 @@ function AboutPage() {
                   </div>
                   <div className="space-y-6 text-gray-500 leading-relaxed text-[15px] lg:pt-12">
                       <p>
-                          Bella Hair began as a private practice — one chair,
+                          Bella Hair began as a private practice. One chair,
                           one client, one undivided hour. It remains so today.
                           We do not run a salon floor. We run an atelier, where
                           every guest is met by name and every service is built
@@ -47,7 +47,7 @@ function AboutPage() {
                           borrowed.
                       </p>
                       <p>
-                          We believe restraint is a luxury — fewer products,
+                          We believe restraint is a luxury. Fewer products,
                           finer technique, longer-lasting results. That is the
                           Bella standard.
                       </p>
