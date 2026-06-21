@@ -1,5 +1,6 @@
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import {Link} from "react-router-dom";
 
 const menu = [
     {
@@ -118,9 +119,9 @@ function ServicesPage() {
                     ))}
                 </div>
                 <div className="mt-20 text-center">
-                    <div className="inline-flex cursor-pointer bg-black text-white text-xs uppercase tracking-[0.25em] py-4 px-8 rounded-full hover:bg-gray-800 transition-colors">
+                    <Link to="/booking" className="inline-flex cursor-pointer bg-black text-white text-xs uppercase tracking-[0.25em] py-4 px-8 rounded-full hover:bg-gray-200 text-black transition-colors">
                         Book a Service
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section>

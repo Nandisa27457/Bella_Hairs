@@ -2,7 +2,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import {Link} from "react-router-dom";
 import brows from "../assets/Brows-in.jpg";
-
+import hero from "../assets/hero-interior.jpg";
 
 const services = [
     { n: "01", name: "Hair" },
@@ -16,16 +16,16 @@ function HomePage() {
   return (
       <div className="min-h-screen flex flex-col">
           <Navbar />
-          <main className="flex flex-col">
+          <main className="flex flex-col flex-grow">
               <section className="pt-20 pb-24 px-6">
                   <div className="max-w-7xl mx-auto">
-                      <div className="grid lg:grid-cols-[1fr_420px] gap-16 items-end">
+                      <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-16 items-end">
                           <div>
                               <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400">
                                   Bella Hair · Johannesburg
                               </span>
 
-                              <h1 className="text-5xl md:text-7xl leading-none mt-6 mb-8 font-serif">
+                              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none mt-6 mb-8 font-serif">
                                   The Art of <br />
                                   <span className="italic">Refined</span>{" "}
                                   Presence
@@ -37,7 +37,7 @@ function HomePage() {
                                   reputation.
                               </p>
 
-                              <div className="mt-10 flex flex-wrap gap-4">
+                              <div className="mt-10 flex flex-col sm:flex-row gap-4">
                                   <Link
                                       to="/booking"
                                       className="inline-block bg-black text-white text-xs uppercase tracking-[0.25em] py-3 px-7 rounded-full hover:bg-gray-800 transition">
@@ -59,11 +59,11 @@ function HomePage() {
                                       key={s.n}
                                       to="/gallery"
                                       className="group flex justify-between items-baseline py-4 border-b border-gray-200 transition-all duration-300 hover:scale-[1.02] hover:px-3 hover:shadow-md hover:bg-gray-50 rounded-lg cursor-pointer">
-                                      <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400">
+                                      <span className="text-lg sm:text-xl transition-all duration-300 group-hover:text-gray-200 group-hover:font-medium">
                                           {s.n}
                                       </span>
 
-                                      <span className="text-xl transition-all duration-300 group-hover:text-black group-hover:font-medium">
+                                      <span className="text-xl transition-all duration-300 group-hover:text-gray-200 group-hover:font-medium">
                                           {s.name}
                                       </span>
                                   </Link>
@@ -74,9 +74,9 @@ function HomePage() {
                       {/* HERO IMAGE */}
                       <div className="mt-16 overflow-hidden rounded-xl border border-gray-100">
                           <img
-                              src="src/assets/hero-interior.jpg"
+                              src={hero}
                               alt="Salon interior"
-                              className="w-full aspect-[21/9] object-cover"
+                              className="w-full h-64 sm:h-80 md:h-96 lg:h-auto object-cover"
                           />
                       </div>
                   </div>
@@ -85,7 +85,7 @@ function HomePage() {
               {/* QUOTE SECTION */}
               <section className="bg-gray-50 border-y border-gray-200 py-24 px-6">
                   <div className="max-w-4xl mx-auto text-center">
-                      <p className="text-2xl md:text-4xl italic">
+                      <p className="text-xl sm:text-2xl md:text-4xl italic leading-relaxed">
                           “We tailor presence; strand by strand, for the woman
                           who knows the difference.”
                       </p>
@@ -96,7 +96,7 @@ function HomePage() {
                   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
                       <img
                           src={brows}
-                          className="rounded-xl w-full object-cover aspect-[2/3]"
+                          className="rounded-xl w-full max-w-md mx-auto md:max-w-none object-cover aspect-[2/3]"
                           alt="Brows"
                       />
 
@@ -122,12 +122,12 @@ function HomePage() {
               </section>
 
               <section className="px-6 pb-24">
-                  <div className="max-w-5xl mx-auto bg-black text-white rounded-xl p-12 text-center">
+                  <div className="max-w-5xl mx-auto bg-black text-white rounded-xl p-8 md:p-12 lg:p-16 text-center">
                       <p className="text-xs uppercase tracking-[0.3em] text-gray-400">
                           By appointment only
                       </p>
 
-                      <h2 className="text-4xl md:text-6xl italic mt-6 mb-6">
+                      <h2 className="text-3xl sm:text-4xl md:text-6xl italic mt-6 mb-6">
                           Reserve your hour.
                       </h2>
 

@@ -70,16 +70,16 @@ function AboutPage() {
                       </div>
 
                       <div className="pt-8 flex gap-4 flex-wrap">
-                          <div
-                              // to="/booking"
+                          <Link
+                              to="/booking"
                               className="bg-black text-white text-xs uppercase tracking-[0.25em] py-3.5 px-7 rounded-full hover:bg-accent transition-colors">
                               Reserve a Visit
-                          </div>
-                          <div
-                              // to="/contact"
-                              className="text-xs uppercase tracking-[0.25em] py-3.5 px-2 border-b border-ink hover:text-amber-700 hover:border-accent transition-colors text-ink">
+                          </Link>
+                          <Link
+                               to="/contact"
+                              className="text-xs uppercase tracking-[0.25em] py-3.5 px-2 border-b border-ink hover:text-amber-600 hover:border-accent transition-colors text-ink">
                               Get in touch
-                          </div>
+                          </Link>
                       </div>
                   </div>
               </div>
