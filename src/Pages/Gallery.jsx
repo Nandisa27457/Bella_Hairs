@@ -7,7 +7,7 @@ import curls from "../assets/curls.jpg";
 import brows from "../assets/Brows-shoot.jpg";
 import threads from "../assets/thread-brows.jpg";
 import brow from "../assets/brow.jpg";
-import lashes from "../assets/lashes-done.jpg";
+import lashes from "../assets/Lashes-done.jpg";
 import lash from "../assets/lashes-nat.jpg";
 import lash2 from "../assets/lashes-make.jpg";
 import wash from "../assets/Hair-wash.jpg";
