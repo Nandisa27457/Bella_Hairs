@@ -1,6 +1,8 @@
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import {Link} from "react-router-dom";
+import brows from "../assets/Brows-in.jpg";
+
 
 const services = [
     { n: "01", name: "Hair" },
@@ -36,14 +38,15 @@ function HomePage() {
                               </p>
 
                               <div className="mt-10 flex flex-wrap gap-4">
-                  
                                   <Link
                                       to="/booking"
                                       className="inline-block bg-black text-white text-xs uppercase tracking-[0.25em] py-3 px-7 rounded-full hover:bg-gray-800 transition">
                                       Book Appointment
                                   </Link>
 
-                                  <Link to="services" className="text-xs uppercase tracking-[0.25em] py-3 px-2 border-b border-gray-300 hover:border-black transition cursor-pointer">
+                                  <Link
+                                      to="services"
+                                      className="text-xs uppercase tracking-[0.25em] py-3 px-2 border-b border-gray-300 hover:border-black transition cursor-pointer">
                                       Explore Services
                                   </Link>
                               </div>
@@ -52,17 +55,18 @@ function HomePage() {
                           {/* SERVICES LIST */}
                           <div className="border-t border-gray-200 pt-6">
                               {services.map((s) => (
-                                  <div
+                                  <Link
                                       key={s.n}
-                                      className="flex justify-between items-baseline py-3 border-b border-gray-200">
+                                      to="/gallery"
+                                      className="group flex justify-between items-baseline py-4 border-b border-gray-200 transition-all duration-300 hover:scale-[1.02] hover:px-3 hover:shadow-md hover:bg-gray-50 rounded-lg cursor-pointer">
                                       <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400">
                                           {s.n}
                                       </span>
 
-                                      <span className="text-xl hover:text-black transition">
+                                      <span className="text-xl transition-all duration-300 group-hover:text-black group-hover:font-medium">
                                           {s.name}
                                       </span>
-                                  </div>
+                                  </Link>
                               ))}
                           </div>
                       </div>
@@ -90,19 +94,13 @@ function HomePage() {
 
               <section className="py-24 px-6">
                   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
-                      {/* <img
-              src={galleryHair}
-              className="rounded-xl w-full object-cover aspect-[2/3]"
-              alt="Hair"
-            /> */}
+                      <img
+                          src={brows}
+                          className="rounded-xl w-full object-cover aspect-[2/3]"
+                          alt="Brows"
+                      />
 
                       <div className="flex flex-col gap-6">
-                          {/* <img
-                src={galleryNails}
-                className="rounded-xl w-full object-cover aspect-[4/3]"
-                alt="Nails"
-              /> */}
-
                           <div>
                               <h3 className="text-2xl italic mb-3">
                                   Bespoke Artistry
@@ -113,7 +111,9 @@ function HomePage() {
                                   with precision and care.
                               </p>
 
-                              <Link to="gallery" className="inline-block mt-6 text-xs uppercase tracking-[0.3em] border-b border-gray-300 hover:border-black cursor-pointer">
+                              <Link
+                                  to="gallery"
+                                  className="inline-block mt-6 text-xs uppercase tracking-[0.3em] border-b border-gray-300 hover:border-black cursor-pointer">
                                   View Gallery
                               </Link>
                           </div>
@@ -135,7 +135,9 @@ function HomePage() {
                           Choose a date, pick a time and confirm your booking.
                       </p>
 
-                      <Link to="booking" className="bg-white text-black text-xs uppercase tracking-[0.25em] py-3 px-8 rounded-full hover:bg-gray-200 transition cursor-pointer inline-block">
+                      <Link
+                          to="booking"
+                          className="bg-white text-black text-xs uppercase tracking-[0.25em] py-3 px-8 rounded-full hover:bg-gray-200 transition cursor-pointer inline-block">
                           Open Calendar
                       </Link>
                   </div>
