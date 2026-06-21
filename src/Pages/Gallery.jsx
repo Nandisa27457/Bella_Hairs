@@ -13,6 +13,8 @@ import lash2 from "../assets/lashes-make.jpg";
 import wash from "../assets/Hair-wash.jpg";
 import braids from "../assets/braids.jpg";
 import hair from "../assets/hair-sew.jpg";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const sections = [
     {
@@ -21,7 +23,7 @@ const sections = [
         title: "The",
         italic: "Nails.",
         intro: "Sculpted, structured, signed off in gloss.",
-        body: "Every set begins with a thorough dry manicure — cuticles tidied, nail plate prepped, length and shape mapped to the hand. We work in builder gels and soft gels for a natural, lightweight finish that wears for three to four weeks without lifting. Choose from almond, oval, square or stiletto; finished in classic French, milky chrome, glazed nude, or a custom art moment for the occasion.",
+        body: "Every set begins with a thorough dry manicure, cuticles tidied, nail plate prepped, length and shape mapped to the hand. We work in builder gels and soft gels for a natural, lightweight finish that wears for three to four weeks without lifting. Choose from almond, oval, square or stiletto; finished in classic French, milky chrome, glazed nude, or a custom art moment for the occasion.",
         items: [
             {
                 src: nude,
@@ -38,7 +40,7 @@ const sections = [
             },
             {
                 src: nails,
-                label: "Chrome Stiletto",
+                label: "Nail Finish",
                 caption: "Mirror finish · custom length",
                 aspect: "aspect-[4/3]",
             },
@@ -50,7 +52,7 @@ const sections = [
         title: "The",
         italic: "Weaves.",
         intro: "Seamless installs, custom blended, photographed in daylight.",
-        body: "From sew-ins and closures to full frontals and quick weaves — we measure, prep and braid the natural hair for a flat, comfortable foundation, then install bundles matched to your texture and density. Lace is tinted, plucked and laid undetectable. Every install closes with a steam, cut and style so you walk out finished, not just fitted.",
+        body: "From sew-ins and closures to full frontals and quick weaves. We measure, prep and braid the natural hair for a flat, comfortable foundation, then install bundles matched to your texture and density. Lace is tinted, plucked and laid undetectable. Every install closes with a steam, cut and style so you walk out finished, not just fitted.",
         items: [
             {
                 src: weave,
@@ -61,7 +63,7 @@ const sections = [
             },
             {
                 src: sewin,
-                label: "Silk Bob",
+                label: "Sew-In Install",
                 caption: "Frontal · cut & curled",
                 aspect: "aspect-[4/3]",
             },
@@ -79,7 +81,7 @@ const sections = [
         title: "The",
         italic: "Brows.",
         intro: "Mapped to the face. Drawn, never copied.",
-        body: "Brows are measured against your bone structure first — never to a trend or a stencil. We offer threading, waxing, tinting and brow lamination, and we finish with a feathered fill that follows the natural hair pattern. The result is a brow that frames the eye without announcing itself: defined, balanced, and entirely yours.",
+        body: "Brows are measured against your bone structure first, never to a trend or a stencil. We offer threading, waxing, tinting and brow lamination, and we finish with a feathered fill that follows the natural hair pattern. The result is a brow that frames the eye without announcing itself: defined, balanced, and entirely yours.",
         items: [
             {
                 src: brows,
@@ -137,18 +139,18 @@ const sections = [
         title: "The",
         italic: "Hair.",
         intro: "Treatments, presses and styling for your own.",
-        body: "Wash days are slow on purpose — scalp massaged, hair detangled with conditioner through, deep treatments steamed in. We silk press for movement and shine without heat damage, sculpt updos for events, and braid for everyday wear. Bring a reference if you have one; bring nothing if you don't.",
+        body: "Wash days are slow on purpose, scalp massaged, hair detangled with conditioner through, deep treatments steamed in. We silk press for movement and shine without heat damage, sculpt updos for events, and braid for everyday wear. Bring a reference if you have one; bring nothing if you don't.",
         items: [
             {
                 src: wash,
-                label: "Glossy Silk Press",
+                label: "Glossy Silk Wash",
                 caption: "Wash, treat & press",
                 aspect: "aspect-[3/4]",
                 span: "md:row-span-2",
             },
             {
                 src: braids,
-                label: "Sculpted Updo",
+                label: "Sculpted Braids",
                 caption: "Event styling",
                 aspect: "aspect-[4/3]",
             },
@@ -165,6 +167,7 @@ const sections = [
 function GalleryPage() {
     return (
         <>
+         <Navbar />
             <section className="px-6 pt-20 pb-10">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex items-end justify-between flex-wrap gap-6 mb-10">
@@ -179,7 +182,7 @@ function GalleryPage() {
                         <p className="text-mute max-w-[44ch] text-sm leading-relaxed">
                             Selected work from the chair, organised by service.
                             Photographed in available light, retouched only for
-                            colour — what you see is what you book.
+                            colour. What you see is what you book.
                         </p>
                     </div>
 
@@ -251,6 +254,7 @@ function GalleryPage() {
                     </div>
                 </section>
             ))}
+            <Footer />
         </>
     );
 }
