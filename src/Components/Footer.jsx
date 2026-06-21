@@ -1,64 +1,107 @@
 
+import { Link } from "react-router-dom";
 
-export default function Footer() {
-  return (
-      <footer className="border-t border-gray-200 mt-24">
-          <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-50">
-              <div>
-                  <h2 className="text-2xl font-display tracking-wide">
-                      Bella Hair
-                  </h2>
-                  <p className="text-sm text-gray-400 mt-3 leading-relaxed">
-                      Luxury hair care and styling experience designed to bring
-                      out your confidence and beauty.
-                  </p>
-              </div>
-              <div>
-                  <h3 className="text-sm uppercase tracking-[0.2em] text-gray-300 mb-4">
-                      Quick Links
-                  </h3>
-                  <ul className="space-y-2 text-sm">
-                      <li>
-                          <a href="/" className="hover:text-gold">
-                              Home
-                          </a>
-                      </li>
-                      <li>
-                          <a href="/services" className="hover:text-gold">
-                              Services
-                          </a>
-                      </li>
-                      <li>
-                          <a href="/about" className="hover:text-gold">
-                              About
-                          </a>
-                      </li>
-                      <li>
-                          <a href="/gallery" className="hover:text-gold">
-                              Gallery
-                          </a>
-                      </li>
-                      <li>
-                          <a href="/contact" className="hover:text-gold">
-                              Contact
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-              <div>
-                  <h3 className="text-sm uppercase tracking-[0.2em] text-gray-300 mb-4">
-                      Contact
-                  </h3>
-                  <p className="text-sm text-gray-400">Durban, South Africa</p>
-                  <p className="text-sm text-gray-400 mt-2">+27 00 000 0000</p>
-                  <p className="text-sm text-gray-400 mt-2">
-                      info@bellahair.com
-                  </p>
-              </div>
-          </div>
-          <div className="border-t border-gray-200 text-center py-4 text-xs text-gray-500">
-              © {new Date().getFullYear()} Bella Hair. All rights reserved.
-          </div>
-      </footer>
-  );
+function Footer() {
+    return (
+        <footer className="border-t border-gray-200 bg-white mt-24">
+            <div className="max-w-7xl mx-auto px-6 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20">
+                    {/* Brand */}
+                    <div>
+                        <h2 className="font-serif text-3xl mb-4">Bella Hair</h2>
+
+                        <p className="text-gray-500 leading-relaxed max-w-sm">
+                            Luxury hair, beauty, and styling services designed
+                            to elevate confidence through refined artistry and
+                            exceptional care.
+                        </p>
+                    </div>
+
+                    {/* Navigation */}
+                    <div>
+                        <h3 className="text-xs uppercase tracking-[0.25em] text-gray-400 mb-6">
+                            Explore
+                        </h3>
+
+                        <ul className="space-y-3">
+                            <li>
+                                <Link
+                                    to="/"
+                                    className="text-gray-600 hover:text-gray-200 transition">
+                                    Home
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    to="/services"
+                                    className="text-gray-600 hover:text-gray-200 transition">
+                                    Services
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    to="/about"
+                                    className="text-gray-600 hover:text-gray-200 transition">
+                                    About
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    to="/gallery"
+                                    className="text-gray-600 hover:text-gray-200 transition">
+                                    Gallery
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    to="/contact"
+                                    className="text-gray-600 hover:text-gray-200 transition">
+                                    Contact
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Contact */}
+                    <div>
+                        <h3 className="text-xs uppercase tracking-[0.25em] text-gray-400 mb-6">
+                            Contact
+                        </h3>
+
+                        <div className="space-y-3 text-gray-600">
+                            <p>Johannesburg, South Africa</p>
+                            <p>+27 74 500 9716</p>
+                            <p>info@bellahair.com</p>
+                        </div>
+
+                        <Link
+                            to="/booking"
+                            className="inline-block mt-8 bg-black text-white text-xs uppercase tracking-[0.25em] px-6 py-3 rounded-full hover:bg-gray-800 transition">
+                            Book Appointment
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Bottom Bar */}
+                <div className="border-t border-gray-200 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p className="text-xs text-gray-500 text-center md:text-left">
+                        © {new Date().getFullYear()} Bella Hair. All rights
+                        reserved.
+                    </p>
+
+                    <div className="flex gap-6 text-xs uppercase tracking-[0.2em] text-gray-400">
+                        <span>Instagram</span>
+                        <span>Facebook</span>
+                        <span>TikTok</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
 }
+
+export default Footer;
