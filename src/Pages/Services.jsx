@@ -1,3 +1,6 @@
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+
 const menu = [
     {
         n: "01",
@@ -57,7 +60,10 @@ const menu = [
 ];
 
 function ServicesPage() {
+    
     return (
+        <>
+        <Navbar />
         <section className="px-6 py-24 bg-white">
             {" "}
             <div className="max-w-5xl mx-auto">
@@ -65,7 +71,7 @@ function ServicesPage() {
                 <span className="text-[10px] uppercase tracking-[0.3em] text-gray-500">
                     The Menu{" "}
                 </span>
-                ```
+                
                 <h1 className="text-5xl md:text-7xl mt-4 mb-6 leading-none font-serif">
                     A curated <span className="italic">service</span> list.
                 </h1>
@@ -118,6 +124,8 @@ function ServicesPage() {
                 </div>
             </div>
         </section>
+        <Footer />
+        </>
     );
 }
 
