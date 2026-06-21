@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import staff from "../assets/Staff.jpg";
 
 function AboutPage() {
   return (
@@ -22,7 +23,7 @@ function AboutPage() {
               <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.1fr] gap-12 items-start">
                   <div className="overflow-hidden rounded-[12px] outline outline-1 -outline-offset-1 outline-black/5">
                       <img
-                          src="src/assets/about-atelier.jpg"
+                          src={staff}
                           alt="Inside the Bella Hair atelier — brushed brass, marble and a single velvet chair"
                           width={1200}
                           height={1536}
