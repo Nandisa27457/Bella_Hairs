@@ -1,5 +1,6 @@
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import {Link} from "react-router-dom";
 
 const services = [
     { n: "01", name: "Hair" },
@@ -13,140 +14,133 @@ function HomePage() {
   return (
       <div className="min-h-screen flex flex-col">
           <Navbar />
+          <main className="flex flex-col">
+              <section className="pt-20 pb-24 px-6">
+                  <div className="max-w-7xl mx-auto">
+                      <div className="grid lg:grid-cols-[1fr_420px] gap-16 items-end">
+                          <div>
+                              <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400">
+                                  Bella Hair · Johannesburg
+                              </span>
 
-  
-      <main className="flex flex-col">
+                              <h1 className="text-5xl md:text-7xl leading-none mt-6 mb-8 font-serif">
+                                  The Art of <br />
+                                  <span className="italic">Refined</span>{" "}
+                                  Presence
+                              </h1>
 
-        {/* HERO SECTION */}
-        <section className="pt-20 pb-24 px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-[1fr_420px] gap-16 items-end">
+                              <p className="text-lg text-gray-600 max-w-[44ch]">
+                                  An exclusive sanctuary for hair and beauty
+                                  services. Private by design, professional by
+                                  reputation.
+                              </p>
 
-              {/* TEXT */}
-              <div>
-                <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400">
-                  Bella Hair · Johannesburg
-                </span>
+                              <div className="mt-10 flex flex-wrap gap-4">
+                  
+                                  <Link
+                                      to="/booking"
+                                      className="inline-block bg-black text-white text-xs uppercase tracking-[0.25em] py-3 px-7 rounded-full hover:bg-gray-800 transition">
+                                      Book Appointment
+                                  </Link>
 
-                <h1 className="text-5xl md:text-7xl leading-none mt-6 mb-8 font-serif">
-                  The Art of <br />
-                  <span className="italic">Refined</span> Presence
-                </h1>
+                                  <Link to="services" className="text-xs uppercase tracking-[0.25em] py-3 px-2 border-b border-gray-300 hover:border-black transition cursor-pointer">
+                                      Explore Services
+                                  </Link>
+                              </div>
+                          </div>
 
-                <p className="text-lg text-gray-600 max-w-[44ch]">
-                  An exclusive sanctuary for hair and beauty services. Private by design,
-                  professional by reputation.
-                </p>
+                          {/* SERVICES LIST */}
+                          <div className="border-t border-gray-200 pt-6">
+                              {services.map((s) => (
+                                  <div
+                                      key={s.n}
+                                      className="flex justify-between items-baseline py-3 border-b border-gray-200">
+                                      <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400">
+                                          {s.n}
+                                      </span>
 
-                {/* BUTTONS (DIVS FOR NOW) */}
-                <div className="mt-10 flex flex-wrap gap-4">
+                                      <span className="text-xl hover:text-black transition">
+                                          {s.name}
+                                      </span>
+                                  </div>
+                              ))}
+                          </div>
+                      </div>
 
-                  <div className="bg-black text-white text-xs uppercase tracking-[0.25em] py-3 px-7 rounded-full hover:bg-gray-800 transition cursor-pointer">
-                    Book Appointment
+                      {/* HERO IMAGE */}
+                      <div className="mt-16 overflow-hidden rounded-xl border border-gray-100">
+                          <img
+                              src="src/assets/hero-interior.jpg"
+                              alt="Salon interior"
+                              className="w-full aspect-[21/9] object-cover"
+                          />
+                      </div>
                   </div>
+              </section>
 
-                  <div className="text-xs uppercase tracking-[0.25em] py-3 px-2 border-b border-gray-300 hover:border-black transition cursor-pointer">
-                    Explore Services
+              {/* QUOTE SECTION */}
+              <section className="bg-gray-50 border-y border-gray-200 py-24 px-6">
+                  <div className="max-w-4xl mx-auto text-center">
+                      <p className="text-2xl md:text-4xl italic">
+                          “We tailor presence; strand by strand, for the woman
+                          who knows the difference.”
+                      </p>
                   </div>
+              </section>
 
-                </div>
-              </div>
-
-              {/* SERVICES LIST */}
-              <div className="border-t border-gray-200 pt-6">
-                {services.map((s) => (
-                  <div
-                    key={s.n}
-                    className="flex justify-between items-baseline py-3 border-b border-gray-200"
-                  >
-                    <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400">
-                      {s.n}
-                    </span>
-
-                    <span className="text-xl hover:text-black transition">
-                      {s.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-            </div>
-
-            {/* HERO IMAGE */}
-            <div className="mt-16 overflow-hidden rounded-xl border border-gray-100">
-              <img
-                src="src/assets/hero-interior.jpg"
-                alt="Salon interior"
-                className="w-full aspect-[21/9] object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* QUOTE SECTION */}
-        <section className="bg-gray-50 border-y border-gray-200 py-24 px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-2xl md:text-4xl italic">
-              “We tailor presence — strand by strand, for the woman who knows the difference.”
-            </p>
-          </div>
-        </section>
-
-        <section className="py-24 px-6">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
-
-            {/* <img
+              <section className="py-24 px-6">
+                  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
+                      {/* <img
               src={galleryHair}
               className="rounded-xl w-full object-cover aspect-[2/3]"
               alt="Hair"
             /> */}
 
-            <div className="flex flex-col gap-6">
-
-              {/* <img
+                      <div className="flex flex-col gap-6">
+                          {/* <img
                 src={galleryNails}
                 className="rounded-xl w-full object-cover aspect-[4/3]"
                 alt="Nails"
               /> */}
 
-              <div>
-                <h3 className="text-2xl italic mb-3">Bespoke Artistry</h3>
+                          <div>
+                              <h3 className="text-2xl italic mb-3">
+                                  Bespoke Artistry
+                              </h3>
 
-                <p className="text-gray-600 text-sm">
-                  Every service is tailored to the individual with precision and care.
-                </p>
+                              <p className="text-gray-600 text-sm">
+                                  Every service is tailored to the individual
+                                  with precision and care.
+                              </p>
 
-                <div className="inline-block mt-6 text-xs uppercase tracking-[0.3em] border-b border-gray-300 hover:border-black cursor-pointer">
-                  View Gallery
-                </div>
-              </div>
+                              <Link to="gallery" className="inline-block mt-6 text-xs uppercase tracking-[0.3em] border-b border-gray-300 hover:border-black cursor-pointer">
+                                  View Gallery
+                              </Link>
+                          </div>
+                      </div>
+                  </div>
+              </section>
 
-            </div>
-          </div>
-        </section>
+              <section className="px-6 pb-24">
+                  <div className="max-w-5xl mx-auto bg-black text-white rounded-xl p-12 text-center">
+                      <p className="text-xs uppercase tracking-[0.3em] text-gray-400">
+                          By appointment only
+                      </p>
 
-        {/* CTA SECTION */}
-        <section className="px-6 pb-24">
-          <div className="max-w-5xl mx-auto bg-black text-white rounded-xl p-12 text-center">
+                      <h2 className="text-4xl md:text-6xl italic mt-6 mb-6">
+                          Reserve your hour.
+                      </h2>
 
-            <p className="text-xs uppercase tracking-[0.3em] text-gray-400">
-              By appointment only
-            </p>
+                      <p className="text-gray-400 max-w-md mx-auto mb-10">
+                          Choose a date, pick a time and confirm your booking.
+                      </p>
 
-            <h2 className="text-4xl md:text-6xl italic mt-6 mb-6">
-              Reserve your hour.
-            </h2>
-
-            <p className="text-gray-400 max-w-md mx-auto mb-10">
-              Choose a date, pick a time and confirm your booking.
-            </p>
-
-            <div className="bg-white text-black text-xs uppercase tracking-[0.25em] py-3 px-8 rounded-full hover:bg-gray-200 transition cursor-pointer inline-block">
-              Open Calendar
-            </div>
-          </div>
-        </section>
-      </main>
+                      <Link to="booking" className="bg-white text-black text-xs uppercase tracking-[0.25em] py-3 px-8 rounded-full hover:bg-gray-200 transition cursor-pointer inline-block">
+                          Open Calendar
+                      </Link>
+                  </div>
+              </section>
+          </main>
           <Footer />
       </div>
   );
