@@ -152,4 +152,4 @@ Developed by Nandisa.
 
 ## License
 
-This project is for educational and portfolio purposes.<img width="1920" height="4765" alt="screencapture-bella-hairs-8p9r-vercel-app-2026-06-22-10_52_49" src="https://github.com/user-attachments/assets/afdbd9c7-af39-4aee-9203-9cae11ebb30f" />
+This project is for educational and portfolio purposes.<img width="1920" height="4765" alt="screencapture-bella-hairs-8p9r-vercel-app-2026-06-22-10_52_49" src="https://github.com/user-attachments/assets/afdbd9c7-af39-4aee-9203-9cae11ebb30f" /
