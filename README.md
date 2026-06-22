@@ -2,7 +2,7 @@
 
 A modern, responsive salon website built with React and Tailwind CSS. The website showcases Bella Hair's services, gallery, booking system, and company information through a clean and elegant user interface.
 
-<img width="400" height="800" alt="screencapture-bella-hairs-8p9r-vercel-app-2026-06-22-10_52_49" src="https://github.com/user-attachments/assets/b6db0d4f-315e-458c-aff3-ff4bd3c4927e" />
+<img width="600" height="1200" alt="screencapture-bella-hairs-8p9r-vercel-app-2026-06-22-10_52_49" src="https://github.com/user-attachments/assets/b6db0d4f-315e-458c-aff3-ff4bd3c4927e" />
 
 
 ---
